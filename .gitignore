@@ -76,10 +76,10 @@ target/
 celerybeat-schedule
 
 # dotenv
-.env
+.venv
 
 # virtualenv
-venv/
+.env/
 ENV/
 
 # Spyder project settings
@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# database file
+db.sqlite3
+
