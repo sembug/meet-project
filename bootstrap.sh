@@ -1,7 +1,12 @@
 echo -e '\033[33;1m==== Criando o vrtual env \033[m'
-virtualenv -p python3 .env
+virtualenv .env
 echo -e '\033[33;1m==== Ativando o .env\033[m'
-source .env/bin/activate
+if [ -f ".env/bin/activate" ] ; then
+    source .env/bin/activate
+fi
+if [ -f ".env/Scripts/activate" ] ; then
+    source .env/Scripts/activate
+fi
 echo -e '\033[33;1m==== Instalando os requirements \033[m'
 pip install -r requirements.txt
 echo -e '\033[33;1m==== Rodando os testes \033[m'
